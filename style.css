@@ -1,0 +1,60 @@
+ *{
+    margin: 0px;
+}
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.purple{
+    background-color: blueviolet;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    grid-template-rows: 330px 330px 330px;
+    gap: 1%;
+
+}
+.blue{
+    grid-row: 2/3 ;
+    grid-column: -3/-2;
+}
+.purple{
+    grid-row: 3/4 ;
+    grid-column: -2/-1;
+}
+@keyframes myanimation{
+    0% {
+        transform: translateX(-100%);
+        rotate: 90deg;
+        scale: 0%;
+    }
+    50%{
+        transform: translateX(0%);
+        rotate: 180deg;
+        scale: 50%;
+    }
+    100%{
+        transform: translateX(100%);
+        rotate: 360deg;
+        scale: 100%;
+    }
+}
+.red {
+    animation: 2s myanimation ease-out infinite;
+}
+.purple{
+    animation: 2s myanimation ease-in-out infinite;
+}
+
+.blue:hover{
+    background-color: chocolate;
+    transition: 0.6s background-color ease-in;
+}
+
